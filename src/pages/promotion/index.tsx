@@ -146,12 +146,12 @@ const OpenApi = () => {
       <Modal isOpen={isOpenWithdraw} onClose={onCloseWithdraw}>
         <ModalOverlay />
         <ModalContent color={useColorModeValue('blackAlpha.700', 'white')}>
-          <ModalHeader>提现联系</ModalHeader>
+          <ModalHeader>提现添加微信</ModalHeader>
           <ModalCloseButton />
           <ModalBody textAlign={'center'}>
             <Image
               style={{ margin: 'auto' }}
-              src={'/imgs/wx300-2.jpg'}
+              src={'/imgs/wxxiaoerlang.png'}
               width={200}
               height={200}
               alt=""

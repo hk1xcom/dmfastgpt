@@ -54,7 +54,7 @@ const OpenApi = () => {
     <Box py={[5, 10]} px={'5vw'}>
       <Card px={6} py={4} position={'relative'}>
         <Box fontSize={'xl'} fontWeight={'bold'}>
-        DM-GPT Api
+        👨‍💻 DM-GPT Api
         </Box>
         <Box fontSize={'sm'} mt={2}>
           DM-GPT Api 允许你将 DM-GPT 的部分功能通过 api
@@ -64,7 +64,7 @@ const OpenApi = () => {
         <Box
           my={1}
           as="a"
-          href="https://kjqvjse66l.feishu.cn/docx/DmLedTWtUoNGX8xui9ocdUEjnNh"
+          href="https://www.mzc77.com/2322.html"
           color={'myBlue.800'}
           textDecoration={'underline'}
           target={'_blank'}
