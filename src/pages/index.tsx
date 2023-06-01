@@ -144,7 +144,7 @@ const Home = () => {
       alignItems={'center'}
       h={'100%'}
       overflow={'overlay'}
-      background={`url('https://storage.mzc77.com/storagee/dmgpt/imgs/bj.jpg') center/cover`}
+      background={`url('https://storage.mzc77.com/storagee/duomiai/imgs/bj.jpg') center/cover`}
     >
       <Box id={'particles-js'} position={'absolute'} top={0} left={0} right={0} bottom={0} />
 
@@ -162,10 +162,10 @@ const Home = () => {
           letterSpacing={'5px'}
           color={'myBlue.600'}
         >
-          DMGPT
+          DUOM Ai
         </Box>
         <Box color={'myBlue.600'} fontSize={['15px', '35px']}>
-        DMAI知识库
+        DUOMAi知识库
         </Box>
         <Box color={'myBlue.600'} fontSize={['30px', '50px']}>
         快速搭建自己的AI知识库

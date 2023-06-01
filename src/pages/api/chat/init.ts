@@ -25,7 +25,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const myModel = await Model.findOne({ userId });
       if (!myModel) {
         const { _id } = await Model.create({
-          name: '应用1',
+          name: '第一个DUOMAi',
           userId,
           status: ModelStatusEnum.running
         });

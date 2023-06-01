@@ -64,10 +64,10 @@ const OpenApi = () => {
     <Box py={[5, 10]} px={'5vw'}>
       <Card px={6} py={4} position={'relative'}>
         <Box fontSize={'xl'} fontWeight={'bold'}>
-          我的邀请
+        🧑‍🤝‍🧑我的邀请
         </Box>
         <Box my={2} color={'blackAlpha.600'} fontSize={'sm'}>
-          你可以通过邀请链接邀请好友注册 DMGpt 账号。好友在 DMGpt
+          你可以通过邀请链接邀请好友注册 DUOMAi 账号。好友在 DUOMAi
           平台的每次充值，你都会获得一定比例的佣金。
         </Box>
         <Flex my={2} alignItems={'center'}>

@@ -64,10 +64,10 @@ const PayRecordTable = () => {
       <Card mt={6} py={4}>
         <Flex alignItems={'flex-end'} px={6} mb={1}>
           <Box fontSize={'xl'} fontWeight={'bold'}>
-            充值记录
+          🔋充值记录
           </Box>
           <Button onClick={onOpenWx} size={'xs'} ml={4} variant={'outline'}>
-            异常问题，请联系客服
+            充值/使用遇到问题加客服
           </Button>
         </Flex>
         <TableContainer px={6}>

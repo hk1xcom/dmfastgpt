@@ -22,7 +22,7 @@ const list = [
   },
   {
     icon: 'develop',
-    label: '开发💻',
+    label: 'API开发💻',
     link: '/openapi'
   },
   {

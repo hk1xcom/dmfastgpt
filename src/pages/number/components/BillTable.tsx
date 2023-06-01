@@ -21,7 +21,7 @@ const BillTable = () => {
   return (
     <Card mt={6} py={4}>
       <Box fontSize={'xl'} fontWeight={'bold'} px={6} mb={1}>
-        使用记录
+      📝使用记录
       </Box>
       <TableContainer position={'relative'}>
         <Table>
