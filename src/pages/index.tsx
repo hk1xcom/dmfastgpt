@@ -155,7 +155,7 @@ const Home = () => {
         position={'absolute'}
         userSelect={'none'}
       >
-        <Image src="/icon/logo.png" w={['70px', '120px']} h={['70px', '120px']} alt={''}></Image>
+        <Image src="https://storage.mzc77.com/storagee/duomiai/icon/logo.png" w={['70px', '120px']} h={['70px', '120px']} alt={''}></Image>
         <Box
           fontWeight={'bold'}
           fontSize={['40px', '70px']}
@@ -194,7 +194,7 @@ const Home = () => {
             </Link>
           )}
 
-          <Box>Powered by 多米科技 .</Box>
+          <Box>All rights reserved DUOMAi</Box>
         </Card>
       </Box>
     </Flex>
