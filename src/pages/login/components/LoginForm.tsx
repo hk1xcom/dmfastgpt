@@ -5,6 +5,7 @@ import { PageTypeEnum } from '@/constants/user';
 import { postLogin } from '@/api/user';
 import type { ResLogin } from '@/api/response/user';
 import { useToast } from '@/hooks/useToast';
+import { Checkbox } from '@chakra-ui/react';
 
 interface Props {
   setPageType: Dispatch<`${PageTypeEnum}`>;
@@ -25,9 +26,17 @@ const LoginForm = ({ setPageType, loginSuccess }: Props) => {
   } = useForm<LoginFormType>();
 
   const [requesting, setRequesting] = useState(false);
+  const [agreed, setAgreed] = useState(false);
 
   const onclickLogin = useCallback(
     async ({ username, password }: LoginFormType) => {
+      if (!agreed) {
+        toast({
+          title: '请同意本站协议',
+          status: 'warning'
+        });
+        return;
+      }
       setRequesting(true);
       try {
         loginSuccess(
@@ -113,9 +122,9 @@ const LoginForm = ({ setPageType, loginSuccess }: Props) => {
             注册账号
           </Box>
         </Flex>
+        <FormControl mt={8}>
         <Button
           type="submit"
-          mt={8}
           w={'100%'}
           size={['md', 'lg']}
           colorScheme="blue"
@@ -123,6 +132,15 @@ const LoginForm = ({ setPageType, loginSuccess }: Props) => {
         >
           登录
         </Button>
+        <Flex align={'center'} justifyContent={'center'} mt={4}>
+        <Checkbox
+          isChecked={agreed}
+          onChange={(e) => setAgreed(e.target.checked)}
+        >
+          您已知晓并且同意本站所有协议
+        </Checkbox>
+        </Flex>
+        </FormControl>
       </form>
     </>
   );

@@ -8,6 +8,7 @@ import type { ResLogin } from '@/api/response/user';
 import { useToast } from '@/hooks/useToast';
 import { useRouter } from 'next/router';
 import { postCreateModel } from '@/api/model';
+import { Link, Text } from '@chakra-ui/react';
 
 interface Props {
   loginSuccess: (e: ResLogin) => void;
@@ -182,6 +183,29 @@ const RegisterForm = ({ setPageType, loginSuccess }: Props) => {
         >
           确认注册
         </Button>
+        <Text mt={2} fontSize="sm" textAlign="left">
+          确认注册即代表您已同意：
+        </Text>
+        <Text mt={2} fontSize="sm" textAlign="left">
+          <Link href="https://www.dmai.top/agreement" target="_blank" color="myBlue.600" textDecoration="underline">
+            ◈本站用户协议
+          </Link>
+        </Text>
+        <Text mt={2} fontSize="sm" textAlign="left">
+          <Link href="https://www.dmai.top/policy" target="_blank" color="myBlue.600" textDecoration="underline">
+            ◈本站隐私协议
+          </Link>
+        </Text>
+        <Text mt={2} fontSize="sm" textAlign="left">
+          <Link href="https://www.dmai.top/foruse" target="_blank" color="myBlue.600" textDecoration="underline">
+            ◈本站使用限制
+          </Link>
+        </Text>
+        <Text mt={2} fontSize="sm" textAlign="left">
+          <Link href="https://www.dmai.top/disclaimers" target="_blank" color="myBlue.600" textDecoration="underline">
+            ◈本站免责条款
+          </Link>
+        </Text>
       </form>
     </>
   );
