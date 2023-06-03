@@ -805,7 +805,7 @@ const Chat = ({ modelId, chatId }: { modelId: string; chatId: string }) => {
                   _focusVisible={{
                     border: 'none'
                   }}
-                  placeholder="提问"
+                  placeholder="请输入问题进行提问...（注意：严禁提问违法违规的问题，AI一经查到敏感词，会无理由自动封号！"
                   resize={'none'}
                   rows={1}
                   height={'22px'}

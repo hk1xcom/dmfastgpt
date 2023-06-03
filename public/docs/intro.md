@@ -22,7 +22,7 @@
 
 1. 注册登录，创建自己的AI知识库，导入预设好的知识库内容，支持 .txt,.doc,.docx,.pdf,.md 文件，Gpt会自动对文本进行 QA 拆分。
 2. 创建自己的AI应用，进行知识库关联，设置系统提示，这样属于自己的AI应用就创建完成。
-3. 选择AI应用进行对话，自己的知识库可以分享到应用市场让更多人使用，也可以创建免登陆链接自己以及团队使用。
+3. 选择AI应用进行对话，自己的知识库可以分享到应用市场让更多人使用，也可以创建免登录链接自己以及团队使用。
 4. 对话结束后，会看到聊天下方有一个“查看提示词”,可以看到搜索到了哪些内容。
 5. 🈲严禁发布、输出、传播涉政治、色情、暴力、恐怖主义、谣言等非法内容，一经发现将对账号进行永久删除。
 注：使用知识库模型对话时，余额消耗会加快。
@@ -40,7 +40,7 @@
 
 本站由"麦资网"团队运营，麦资网-一个专注于资源分享，互联网学习的网站。
 - [麦资网](https://www.mzc77.com/)
-- [好课易学](https://www.mzc77.com/)
+- [DUOMAi博客](https://blog.dmai.top/)
 
 ### 🔘 DUOM-Ai 问题反馈/添加微信
 
@@ -49,6 +49,6 @@
 -镜像自动化构建😛
 -本网站问题反馈😁
 
-| 扫码反馈/更多内容        | 扫码添加客服     |
+| 微信扫码体验        | 扫码添加客服     |
 | ----------------------- | -------------------- |
-| ![Demo](https://storage.mzc77.com/storagee/duomiai/imgs/gengduobangzhu.png) |![Demo](https://storage.mzc77.com/storagee/duomiai/imgs/wxxiaoerlang.png) |
+| ![Demo](https://storage.mzc77.com/storagee/duomiai/imgs/duomaixiaochengxu.jpg) |![Demo](https://storage.mzc77.com/storagee/duomiai/imgs/wxxiaoerlang.png) |
