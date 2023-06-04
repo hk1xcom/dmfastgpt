@@ -85,7 +85,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       } else {
         return {
           guidePrompt: model.chat.systemPrompt,
-          systemprompts: [
+          systemPrompts: [
             {
               obj: ChatRoleEnum.System,
               value:

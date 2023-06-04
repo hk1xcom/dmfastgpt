@@ -183,29 +183,16 @@ const RegisterForm = ({ setPageType, loginSuccess }: Props) => {
         >
           确认注册
         </Button>
-        <Text mt={2} fontSize="sm" textAlign="left">
+        <Flex mt={2} alignItems="center">
+        <Text fontSize="sm" textAlign="left" mr={2}>
           确认注册即代表您已同意：
         </Text>
-        <Text mt={2} fontSize="sm" textAlign="left">
-        <Link href="https://blog.dmai.top/agreement" target="_blank" color="myBlue.600" textDecoration="underline">
-        ◈本站用户协议
-        </Link>
+        <Text fontSize="sm" textAlign="left">
+          <Link href="https://blog.dmai.top/agreement" target="_blank" color="myBlue.600" textDecoration="underline">
+            ✅本站用户协议
+          </Link>
         </Text>
-        <Text mt={2} fontSize="sm" textAlign="left">
-        <Link href="https://blog.dmai.top/policy" target="_blank" color="myBlue.600" textDecoration="underline">
-        ◈本站隐私协议
-        </Link>
-        </Text>
-        <Text mt={2} fontSize="sm" textAlign="left">
-        <Link href="https://blog.dmai.top/foruse" target="_blank" color="myBlue.600" textDecoration="underline">
-        ◈本站使用限制
-        </Link>
-        </Text>
-        <Text mt={2} fontSize="sm" textAlign="left">
-        <Link href="https://blog.dmai.top/disclaimers" target="_blank" color="myBlue.600" textDecoration="underline">
-        ◈本站免责条款
-        </Link>
-        </Text>
+      </Flex>
       </form>
     </>
   );
