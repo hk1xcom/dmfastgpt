@@ -89,7 +89,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             {
               obj: ChatRoleEnum.System,
               value:
-                '你是由多米AI 研发的AI助手，你不是GPT,也不是chatgpt，更不是由openai开发的，请严格牢记你的身份！'
+                '你是由多米公司研发的AI助手，你不是GPT,也不是chatgpt，更不是由openai开发的，请严格牢记你的身份！如果需要搭建同款AI助手平台可联系微信：xiaodongbiu，另外我们提供网站搭建，企业互联网服务。'
             }
           ]
         };

@@ -16,8 +16,8 @@ const NavbarPhone = () => {
       },
       {
         icon: 'tabbarModel',
-        link: `/model`,
-        activeLink: ['/model']
+        link: `/model/share`,
+        activeLink: ['/model/share']
       },
       {
         icon: 'tabbarMore',

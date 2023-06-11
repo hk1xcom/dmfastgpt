@@ -7,22 +7,27 @@ import { useRouter } from 'next/router';
 const list = [
   {
     icon: 'kb',
-    label: '我的知识库📚',
+    label: 'MYAI知识库',
     link: '/kb'
   },
   {
     icon: 'appStore',
-    label: 'AI应用市场💠',
-    link: '/model/share'
+    label: 'MYAI助手',
+    link: '/model'
   },
   {
     icon: 'promotion',
-    label: '邀请好友🧑‍🤝‍🧑',
+    label: '邀请好友',
     link: '/promotion'
   },
   {
-    icon: 'wx',
-    label: '关注我们',
+    icon: 'develop',
+    label: 'API开发',
+    link: '/openapi'
+  },
+  {
+    icon: 'git',
+    label: '支持我们',
     link: 'https://storage.mzc77.com/storagee/duomiai/imgs/mzc77gongzhonghao.jpg'
   }
 ];

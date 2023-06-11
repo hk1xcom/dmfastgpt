@@ -126,34 +126,40 @@ const NumberSetting = () => {
             <Box>
               <strong>{userInfo?.balance}</strong> 元
             </Box>
-          <Button
-            size={['xs', 'sm']}
-            w={['70px', '80px']}
-            ml={5}
-            onClick={() => setShowPay(true)}
-          >
-            充值
-          </Button>
+            <Button
+              size={['xs', 'sm']}
+              w={['70px', '80px']}
+              ml={5}
+              onClick={() => setShowPay(true)}
+            >
+              充值
+            </Button>
           </Flex>
-          <Box fontSize={'xs'} color={'blackAlpha.500'}>
-            填写自己的KEY使用AI应用不收费，知识库索引不支持自己的KEY请知晓！
+          <Box mt={2}>
+            <Flex alignItems={'center'}>
+              <Box flex={'0 0 50px'}>OPKEY:</Box>
+              <Input
+                {...register(`openaiKey`)}
+                maxW={'300px'}
+                placeholder={'请填写sk-*******格式的OPKEY'}
+                size={'sm'}
+                onBlur={handleSubmit(onclickSave)}
+                onKeyDown={(e) => {
+                  if (e.keyCode === 13) {
+                    handleSubmit(onclickSave)();
+                  }
+                }}
+                isDisabled={userInfo?.balance !== undefined && userInfo.balance < 30}
+                bg={userInfo?.balance !== undefined && userInfo.balance < 30 ? 'gray.200' : undefined}
+              />
+              {userInfo && userInfo.balance !== undefined && userInfo.balance < 30 && (
+                <Box ml={2} fontSize={'xs'} color={'blackAlpha.500'}>
+                  充值或累计消费30元即可使用自己的OPAIKEY
+                </Box>
+              )}
+            </Flex>
           </Box>
         </Box>
-        <Flex mt={6} alignItems={'center'}>
-          <Box flex={'0 0 85px'}>opKey:</Box>
-          <Input
-            {...register(`openaiKey`)}
-            maxW={'300px'}
-            placeholder={'openai账号。回车或失去焦点保存'}
-            size={'sm'}
-            onBlur={handleSubmit(onclickSave)}
-            onKeyDown={(e) => {
-              if (e.keyCode === 13) {
-                handleSubmit(onclickSave)();
-              }
-            }}
-          ></Input>
-        </Flex>
       </Card>
 
       <File onSelect={onSelectFile} />

@@ -16,6 +16,10 @@ const ModelDetail = ({ modelId, isPc }: { modelId: string; isPc: boolean }) => {
   const { userInfo, modelDetail, loadModelDetail, refreshModel, setLastModelId } = useUserStore();
   const { Loading, setIsLoading } = useLoading();
   const [btnLoading, setBtnLoading] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const allowedUsers = ['995764289@qq.com', '1124644408@qq.com', '18710719798'];
+
 
   const formHooks = useForm({
     defaultValues: modelDetail
@@ -38,10 +42,7 @@ const ModelDetail = ({ modelId, isPc }: { modelId: string; isPc: boolean }) => {
     }
   });
 
-  const isOwner = useMemo(
-    () => modelDetail.userId === userInfo?._id,
-    [modelDetail.userId, userInfo?._id]
-  );
+  const isOwner = useMemo(() => modelDetail.userId === userInfo?._id, [modelDetail.userId, userInfo?._id]);
 
   const canRead = useMemo(
     () => isOwner || isLoading || modelDetail.share.isShareDetail,
@@ -97,6 +98,7 @@ const ModelDetail = ({ modelId, isPc }: { modelId: string; isPc: boolean }) => {
     },
     [refreshModel, toast]
   );
+
   // 提交保存表单失败
   const saveSubmitError = useCallback(() => {
     // deep search message
@@ -121,6 +123,15 @@ const ModelDetail = ({ modelId, isPc }: { modelId: string; isPc: boolean }) => {
   );
 
   useEffect(() => {
+    const currentUser = userInfo?.username;
+    if (currentUser && allowedUsers.includes(currentUser)) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  }, [userInfo]);
+  
+  useEffect(() => {
     window.onbeforeunload = (e) => {
       e.preventDefault();
       e.returnValue = '内容已修改，确认离开页面吗？';
@@ -130,6 +141,23 @@ const ModelDetail = ({ modelId, isPc }: { modelId: string; isPc: boolean }) => {
       window.onbeforeunload = null;
     };
   }, [router]);
+
+  if (!isVisible) {
+    return (
+      <Box h="100vh" display="flex" alignItems="center" justifyContent="center">
+        <Box
+          bg="rgba(0, 0, 0, 0.5)"
+          color="white"
+          fontSize="xl"
+          fontWeight="bold"
+          textAlign="center"
+          p={6}
+        >
+          您没有权限访问此页面丨编辑应用请联系站长
+        </Box>
+      </Box>
+    );
+  }
 
   return (
     <Box h={'100%'} p={5} overflow={'overlay'} position={'relative'}>
