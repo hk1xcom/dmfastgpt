@@ -18,7 +18,7 @@ const Navbar = () => {
   const navbarList = useMemo(
     () => [
       {
-        label: '聊天',
+        label: 'CHAT聊天',
         icon: 'chat',
         link: `/chat?modelId=${lastChatModelId}&chatId=${lastChatId}`,
         activeLink: ['/chat']
@@ -30,31 +30,31 @@ const Navbar = () => {
         activeLink: ['/model']
       },
       {
-        label: '知识库',
+        label: 'AI知识库',
         icon: 'kb',
         link: `/kb`,
         activeLink: ['/kb']
       },
       {
-        label: '应用市场',
+        label: 'AI市场',
         icon: 'appStore',
         link: '/model/share',
         activeLink: ['/model/share']
       },
       {
-        label: '邀请',
+        label: '我的邀请',
         icon: 'promotion',
         link: '/promotion',
         activeLink: ['/promotion']
       },
       {
-        label: '开发',
+        label: 'API开发',
         icon: 'develop',
         link: '/openapi',
         activeLink: ['/openapi']
       },
       {
-        label: '账号',
+        label: '我的账号',
         icon: 'user',
         link: '/number',
         activeLink: ['/number']
@@ -68,7 +68,7 @@ const Navbar = () => {
       flexDirection={'column'}
       alignItems={'center'}
       pt={6}
-      backgroundColor={'#465069'}
+      backgroundColor={'#FFFFFF'}
       h={'100%'}
       w={'100%'}
       boxShadow={'4px 0px 4px 0px rgba(43, 45, 55, 0.01)'}
@@ -105,15 +105,16 @@ const Navbar = () => {
                 router.push(item.link);
               }}
               cursor={'pointer'}
-              w={'60px'}
-              h={'45px'}
+              w={'50px'}
+              h={'50px'}
               _hover={{
                 color: '#ffffff'
               }}
               {...(item.activeLink.includes(router.pathname)
                 ? {
                     color: '#ffffff ',
-                    backgroundImage: 'linear-gradient(270deg,#4e83fd,#3370ff)'
+                    borderRadius: '50%',
+                    backgroundImage: 'radial-gradient(circle at center, #00ff6f4a, #ffffff)'
                   }
                 : {
                     color: '#9096a5',

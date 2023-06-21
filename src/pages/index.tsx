@@ -162,13 +162,10 @@ const Home = () => {
           letterSpacing={'5px'}
           color={'myBlue.600'}
         >
-          DUOM Ai
+          DUOM-Ai
         </Box>
         <Box color={'myBlue.600'} fontSize={['15px', '35px']}>
-        DUOMAi知识库
-        </Box>
-        <Box color={'myBlue.600'} fontSize={['30px', '50px']}>
-        快速搭建自己的AI知识库
+        DUOMAi交互
         </Box>
 
         <Button
@@ -176,7 +173,7 @@ const Home = () => {
           fontSize={['xl', '3xl']}
           h={'auto'}
           py={[2, 3]}
-          onClick={() => router.push(`/model`)}
+          onClick={() => router.push(`/chat`)}
         >
           点击开始
         </Button>

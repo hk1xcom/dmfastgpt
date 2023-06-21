@@ -172,7 +172,7 @@ const PhoneSliderBar = ({
 
       <Divider my={3} colorScheme={useColorModeValue('gray', 'white')} />
 
-      <RenderButton onClick={() => router.push('/model')}>
+      <RenderButton onClick={() => router.push('/model/share')}>
         <>
           <MyIcon name="out" fill={'white'} w={'18px'} h={'18px'} mr={4} />
           退出聊天
@@ -181,7 +181,7 @@ const PhoneSliderBar = ({
       <RenderButton onClick={onOpenWx}>
         <>
           <MyIcon name="wx" fill={'white'} w={'18px'} h={'18px'} mr={4} />
-          交流群
+          添加微信
         </>
       </RenderButton>
 

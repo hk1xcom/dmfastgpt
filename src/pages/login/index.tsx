@@ -81,7 +81,7 @@ const Login = () => {
         py={[5, 10]}
         px={'5vw'}
         borderRadius={isPc ? 'md' : 'none'}
-        gap={5}
+        gap={20}
       >
         {isPc && (
           <Image

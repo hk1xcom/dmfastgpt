@@ -9,6 +9,18 @@ import { useToast } from '@/hooks/useToast';
 import { useRouter } from 'next/router';
 import { postCreateModel } from '@/api/model';
 import { Link, Text } from '@chakra-ui/react';
+//增加协议
+import { useMarkdown } from '@/hooks/useMarkdown';
+import Markdown from '@/components/Markdown';
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter
+} from '@chakra-ui/react';
+//增加协议
 
 interface Props {
   loginSuccess: (e: ResLogin) => void;
@@ -23,6 +35,16 @@ interface RegisterType {
 }
 
 const RegisterForm = ({ setPageType, loginSuccess }: Props) => {
+  //增加协议
+  const [showModal, setShowModal] = useState(false);
+  const handleShowModal = () => {
+    setShowModal(true);
+  };
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+  const { data: pact } = useMarkdown({ url: '/pact.md' });
+  //增加协议
   const { inviterId = '' } = useRouter().query as { inviterId: string };
   const { toast } = useToast();
   const {
@@ -184,15 +206,33 @@ const RegisterForm = ({ setPageType, loginSuccess }: Props) => {
           确认注册
         </Button>
         <Flex mt={2} alignItems="center">
-        <Text fontSize="sm" textAlign="left" mr={2}>
-          确认注册即代表您已同意：
-        </Text>
-        <Text fontSize="sm" textAlign="left">
-          <Link href="https://blog.dmai.top/agreement" target="_blank" color="myBlue.600" textDecoration="underline">
-            ✅本站用户协议
-          </Link>
-        </Text>
-      </Flex>
+          <Text fontSize="sm" textAlign="left" mr={2}>
+            注册即同意：
+          </Text>
+          <Box
+            fontSize="sm"
+            color={'myBlue.600'}
+            cursor={'pointer'}
+            _hover={{ textDecoration: 'underline' }}
+            onClick={handleShowModal}
+          >
+            用户服务协议
+          </Box>
+        </Flex>
+        <Modal isOpen={showModal} onClose={handleCloseModal}>
+          <ModalOverlay />
+          <ModalContent maxW="80%" maxH={`calc(80vh)`}>
+            <ModalHeader>用户服务协议</ModalHeader>
+            <ModalBody style={{ overflowY: 'auto' }}>
+              <Markdown source={pact} />
+            </ModalBody>
+            <ModalFooter>
+              <Button colorScheme="blue" mr={3} onClick={handleCloseModal}>
+                同意
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
       </form>
     </>
   );
