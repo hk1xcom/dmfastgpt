@@ -144,7 +144,7 @@ const Home = () => {
       alignItems={'center'}
       h={'100%'}
       overflow={'overlay'}
-      background={`url('https://storage.mzc77.com/storagee/duomiai/imgs/bj.jpg') center/cover`}
+      background={`url('https://storage.mzc77.com/dmai/pcshouyebj.jpg') center/cover`}
     >
       <Box id={'particles-js'} position={'absolute'} top={0} left={0} right={0} bottom={0} />
 
@@ -155,7 +155,7 @@ const Home = () => {
         position={'absolute'}
         userSelect={'none'}
       >
-        <Image src="https://storage.mzc77.com/storagee/duomiai/icon/logo.png" w={['70px', '120px']} h={['70px', '120px']} alt={''}></Image>
+        <Image src="https://storage.mzc77.com/dmai/logo.png" w={['70px', '120px']} h={['70px', '120px']} alt={''}></Image>
         <Box
           fontWeight={'bold'}
           fontSize={['40px', '70px']}

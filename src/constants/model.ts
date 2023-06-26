@@ -29,26 +29,26 @@ export const ChatModelMap = {
   [OpenAiChatEnum.GPT35]: {
     chatModel: OpenAiChatEnum.GPT35,
     name: 'DuoMAi',
-    contextMaxToken: 10000,
-    systemMaxToken: 10000,
+    contextMaxToken: 4096,
+    systemMaxToken: 2400,
     maxTemperature: 1.2,
     price: 10
   },
   [OpenAiChatEnum.GPT4]: {
     chatModel: OpenAiChatEnum.GPT4,
-    name: 'Gpt4',
+    name: 'DuoMAi4',
     contextMaxToken: 8000,
     systemMaxToken: 3000,
     maxTemperature: 1.2,
-    price: 50
+    price: 60
   },
   [OpenAiChatEnum.GPT432k]: {
     chatModel: OpenAiChatEnum.GPT432k,
-    name: 'Gpt4-32k',
+    name: 'DuoMAi4-32k',
     contextMaxToken: 32000,
     systemMaxToken: 3000,
     maxTemperature: 1.2,
-    price: 90
+    price: 100
   },
   [ClaudeEnum.Claude]: {
     chatModel: ClaudeEnum.Claude,

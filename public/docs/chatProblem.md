@@ -17,4 +17,4 @@
 **其他问题**
 | 微信扫码体验  | 扫码添加客服微信 |
 | ----------------------- | -------------------- |
-| ![Demo](https://storage.mzc77.com/storagee/duomiai/imgs/duomaixiaochengxu.jpg) | ![Demo](https://storage.mzc77.com/storagee/duomiai/imgs/wxxiaoerlang.png) |
+| ![Demo](https://storage.mzc77.com/dmai/xiaochengxuewm.jpg) | ![Demo](https://storage.mzc77.com/dmai/wxxiaoerlang.png) |

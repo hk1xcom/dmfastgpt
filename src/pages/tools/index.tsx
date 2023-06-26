@@ -28,7 +28,7 @@ const list = [
   {
     icon: 'git',
     label: '支持我们',
-    link: 'https://storage.mzc77.com/storagee/duomiai/imgs/mzc77gongzhonghao.jpg'
+    link: 'https://storage.mzc77.com/dmai/mzc77gongzhonghao.jpg'
   }
 ];
 
@@ -48,7 +48,7 @@ const Tools = () => {
           mt={5}
           borderRadius={'md'}
           onClick={() => {
-            if (item.link === 'https://storage.mzc77.com/storagee/duomiai/imgs/mzc77gongzhonghao.jpg') {
+            if (item.link === 'https://storage.mzc77.com/dmai/mzc77gongzhonghao.jpg') {
               setModalOpen(true);
             } else {
               router.push(item.link);
@@ -77,7 +77,7 @@ const Tools = () => {
         >
           <h2>长按关注我们</h2>
           <img
-            src="https://storage.mzc77.com/storagee/duomiai/imgs/mzc77gongzhonghao.jpg"
+            src="https://storage.mzc77.com/dmai/mzc77gongzhonghao.jpg"
             alt="长按关注我们"
             style={{ marginBottom: '10px' }} // 图片下方留白
           />
