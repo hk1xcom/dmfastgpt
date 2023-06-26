@@ -46,7 +46,7 @@ const modelList = () => {
       <Card px={6} py={3}>
         <Box display={['block', 'flex']} alignItems={'center'} justifyContent={'space-between'}>
           <Box fontWeight={'bold'} flex={1} fontSize={'xl'}>
-          💠应用市场
+          💠AI应用市场
           </Box>
           <Box mt={[2, 0]} textAlign={'right'}>
             <Input

@@ -30,31 +30,31 @@ const Navbar = () => {
         activeLink: ['/model']
       },
       {
-        label: '知识库',
+        label: 'AI知识库',
         icon: 'kb',
         link: `/kb`,
         activeLink: ['/kb']
       },
       {
-        label: '应用市场',
+        label: 'AI市场',
         icon: 'appStore',
         link: '/model/share',
         activeLink: ['/model/share']
       },
       {
-        label: '邀请',
+        label: '我的邀请',
         icon: 'promotion',
         link: '/promotion',
         activeLink: ['/promotion']
       },
       {
-        label: '开发',
+        label: 'API开发',
         icon: 'develop',
         link: '/openapi',
         activeLink: ['/openapi']
       },
       {
-        label: '账号',
+        label: '我的账号',
         icon: 'user',
         link: '/number',
         activeLink: ['/number']

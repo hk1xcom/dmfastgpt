@@ -162,7 +162,7 @@ const Home = () => {
           letterSpacing={'5px'}
           color={'myBlue.600'}
         >
-          DUOM Ai
+          DUOM-Ai
         </Box>
         <Box color={'myBlue.600'} fontSize={['15px', '35px']}>
         DUOMAi交互
